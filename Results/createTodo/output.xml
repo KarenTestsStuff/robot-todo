@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-30T10:54:27.752893" rpa="false" schemaversion="5">
+<suite id="s1" name="createTodo" source="C:\Development\robot-scripts\robot-todo\Tests\createTodo.robot">
+<test id="s1-t1" name="Create a todo and add it to the list" line="7">
+<kw name="Begin web test" owner="common">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-30T10:54:27.881894" level="INFO">Karen is testing stuff!</msg>
+<arg>Karen is testing stuff!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-30T10:54:27.881894" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-30T10:54:27.881894" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-30T10:54:27.881894" elapsed="1.219726"/>
+</kw>
+<status status="PASS" start="2024-07-30T10:54:27.880893" elapsed="1.220727"/>
+</kw>
+<kw name="Navigate to home page" owner="todoApp">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-30T10:54:29.102622" level="INFO">Opening url 'https://todomvc.com/examples/javascript-es5/dist/'</msg>
+<arg>https://todomvc.com/examples/javascript-es5/dist/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-30T10:54:29.102622" elapsed="0.187003"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-30T10:54:29.472693" level="INFO">Current page contains text 'todos'.</msg>
+<arg>todos</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-07-30T10:54:29.290625" elapsed="0.182068"/>
+</kw>
+<status status="PASS" start="2024-07-30T10:54:29.102622" elapsed="0.370071"/>
+</kw>
+<kw name="Enter valid todo text" owner="todoApp">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-30T10:54:29.473693" level="INFO">Typing text 'My First Todo' into text field '//input[/html/body/section/header/input]'.</msg>
+<arg>//input[/html/body/section/header/input]</arg>
+<arg>My First Todo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-30T10:54:29.473693" elapsed="0.046000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-07-30T10:54:29.519693" level="INFO">Sending key(s) ('RETURN',) to //*[/html/body/section/header/input] element.</msg>
+<msg time="2024-07-30T10:54:29.798706" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2024-07-30T10:54:29.798706" level="INFO">Releasing special key RETURN.</msg>
+<arg>//*[/html/body/section/header/input]</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-07-30T10:54:29.519693" elapsed="0.288013"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>My First Todo</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-30T10:54:29.807706" elapsed="0.009999"/>
+</kw>
+<status status="PASS" start="2024-07-30T10:54:29.473693" elapsed="0.344012"/>
+</kw>
+<kw name="End web test" owner="common">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-30T10:54:29.818705" level="INFO">Karen is done testing stuff!</msg>
+<arg>Karen is done testing stuff!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-30T10:54:29.818705" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-30T10:54:32.818939" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-30T10:54:29.818705" elapsed="3.000234"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-30T10:54:32.818939" elapsed="2.137927"/>
+</kw>
+<status status="PASS" start="2024-07-30T10:54:29.818705" elapsed="5.138161"/>
+</kw>
+<status status="PASS" start="2024-07-30T10:54:27.880893" elapsed="7.075973"/>
+</test>
+<doc>This test will create a todo and add it to the list</doc>
+<status status="PASS" start="2024-07-30T10:54:27.753894" elapsed="7.203971"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="createTodo">createTodo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
